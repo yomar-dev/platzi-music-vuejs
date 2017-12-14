@@ -12,7 +12,13 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      artists: [
+        { name: 'Sin Bandera' },
+        { name: 'Alex Ubago' },
+        { name: 'Laura Pausini' },
+        { name: 'Ha Ash' },
+        { name: 'Los de Adentro' }
+      ]
     }
   }
 }
