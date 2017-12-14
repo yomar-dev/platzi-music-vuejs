@@ -8,18 +8,25 @@
 </template>
 
 <script>
+/**
+ * No es necesario escribir './api/index.js' ya que al llamarse 'index'
+ * es el primero que va a requerir.
+ */
+import getArtists from './api'
+
 export default {
   name: 'app',
   data () {
     return {
-      artists: [
-        { name: 'Sin Bandera' },
-        { name: 'Alex Ubago' },
-        { name: 'Laura Pausini' },
-        { name: 'Ha Ash' },
-        { name: 'Los de Adentro' }
-      ]
+      artists: []
     }
+  },
+  mounted: function(){
+    const self = this
+    getArtists()
+      .then(function(artists) {
+        self.artists = artists
+      })
   }
 }
 </script>
