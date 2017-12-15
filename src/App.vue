@@ -22,6 +22,9 @@ export default {
       artists: []
     }
   },
+  components: {
+    Artist
+  },
   mounted: function(){
     const self = this
     getArtists()
