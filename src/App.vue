@@ -4,7 +4,7 @@
     h1 Platzi Music
 
     ul
-      li(v-for="artist in artists") {{ artist.name }}
+      artist(v-for="artist in artists" v-bind:artist="artist")
 </template>
 
 <script>
