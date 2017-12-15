@@ -12,6 +12,7 @@
  * No es necesario escribir './api/index.js' ya que al llamarse 'index'
  * es el primero que va a requerir.
  */
+import Artist from './components/Artist.vue'
 import getArtists from './api'
 
 export default {
