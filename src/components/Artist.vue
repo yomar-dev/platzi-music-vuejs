@@ -11,5 +11,7 @@ export default {
 </script>
 
 <style lang="stylus">
-
+  li
+    display block
+    margin 10px 0
 </style>
