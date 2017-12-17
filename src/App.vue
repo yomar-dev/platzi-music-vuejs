@@ -2,7 +2,7 @@
   #app
     img(src='./assets/logo.png')
     h1 Platzi Music
-    select
+    select(v-model="selectedCountry")
       option(v-for="country in countries" :value="country.value") {{ country.name }}
     ul
       artist(v-for="artist in artists" v-bind:artist="artist" v-bind:key="artist.mbid")
@@ -25,7 +25,8 @@ export default {
         { name: 'Colombia', value: 'colombia' },
         { name: 'Argentina', value: 'argentina' },
         { name: 'España', value: 'spain' }
-      ]
+      ],
+      selectedCountry: 'colombia'
     } 
   },
   components: {
