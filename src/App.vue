@@ -32,12 +32,26 @@ export default {
   components: {
     Artist
   },
+  methods: {
+    refreshArtists(){
+      const self = this
+      getArtists(this.selectedCountry)
+        .then(function(artists) {
+          self.artists = artists
+        })
+    }
+  },
   mounted: function(){
-    const self = this
-    getArtists()
-      .then(function(artists) {
-        self.artists = artists
-      })
+    this.refreshArtists()
+  },
+  /**
+   * Este es otro objeto en el cual le decimos que realice cierta acción cuando haya
+   * un cambio en la vista.
+   */
+  watch: {
+    selectedCountry: function(){
+      this.refreshArtists()
+    }
   }
 }
 </script>
