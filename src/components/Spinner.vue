@@ -5,7 +5,7 @@
 
 <script>
 	export default{
-		name; 'spinner'
+		name: 'spinner'
 	}
 </script>
 
