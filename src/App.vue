@@ -81,7 +81,10 @@ ul
 
 li
   display inline-block
+  box-sizing border-box
   margin 0 10px
+  float left
+  width 25%
 
 a
   color #42b983
